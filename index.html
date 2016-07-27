@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+    <!-- TODO: load polyfill only when needed -->
+    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <script>
+        Polymer = {
+            dom: 'shadow'
+        };
+    </script>
+    <link rel="import" href="bower_components/polymer/polymer.html">
+    <link rel="import" href="bower_components/polymer-ts/polymer-ts.min.html" />
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+</head>
+<body>
+
+    <!-- WC-way: everything is an element -->
+    <!-- and by the way - WebStorm recognizes the <dom-module> tag -->
+    <wc-app></wc-app>
+
+    <script>
+        System.import('src/wc-app');
+    </script>
+</body>
+</html>
