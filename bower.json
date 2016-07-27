@@ -1,0 +1,17 @@
+{
+  "name": "wc-app",
+  "description": "",
+  "main": "",
+  "authors": [
+    "tpluscode <tpluscode@users.noreply.github.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "polymer-ts": "~0.1.26"
+  }
+}
