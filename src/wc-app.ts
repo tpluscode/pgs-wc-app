@@ -11,9 +11,30 @@ class WcApp extends polymer.Base {
     @property()
     slides: Array;
 
-    @property()
-    showEditor: true;
+    @property({ value: true})
+    showEditor: Boolean;
 
+    ready() {
+        this.setAttribute('tabindex', "0");
+        this.focus();
+    }
+
+    @listen('keydown')
+    _keyPressed(e) {
+        switch (e.code) {
+            case 'ArrowUp':
+            case 'ArrowLeft':
+                this.$.slideList.selectPrevious();
+                break;
+            case 'ArrowDown':
+            case 'ArrowRight':
+                this.$.slideList.selectNext();
+                break;
+            case 'KeyE':
+                this.showEditor = !this.showEditor;
+                break;
+        }
+    }
 }
 
 WcApp.register();

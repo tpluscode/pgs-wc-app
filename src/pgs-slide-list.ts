@@ -6,17 +6,29 @@ import 'bower_components/iron-ajax/iron-ajax.html!'
 @component('pgs-slide-list')
 class PgsSlideList extends polymer.Base {
 
-    @property({ type: Array })
+    @property({type: Array})
     slides:Array;
 
-    @property({ readOnly: true })
+    @property({readOnly: true})
     currentSlideUrl:Object;
 
-    @property({ readOnly: true, notify: true })
+    @property({readOnly: true, notify: true})
     currentSlideContent:String;
 
     ready() {
         this.$.list.selectIndex(0);
+    }
+
+    selectNext() {
+        if (this.$.list.selected != this.slides.length - 1) {
+            this.$.list.selectNext();
+        }
+    }
+
+    selectPrevious() {
+        if (this.$.list.selected != 0) {
+            this.$.list.selectPrevious();
+        }
     }
 
     slideSelected(e) {
