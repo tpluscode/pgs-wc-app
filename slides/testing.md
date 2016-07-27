@@ -1,8 +1,8 @@
 ## Testing elements
+### Web Component Tester
 
 `npm install -g web-component-tester`
 
-* Web Component tester
-* integrates sinon, jasmine, mocha, selenium runner
+* integrated sinon, jasmine, mocha, selenium runner
 * `<test-fixture>`
 * `flush()`
