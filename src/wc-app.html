@@ -1,5 +1,19 @@
 <dom-module id="wc-app">
     <template>
-        Hello
+        <!-- unfortunately mixin replaces default completely -->
+        <style>
+
+            pgs-md-ed {
+                --pgs-md-ed-container: {
+                    padding: 5px;
+                    width: 50%;
+                    flex: 1;
+                    margin: 5px;
+                }
+            }
+
+        </style>
+
+        <pgs-md-ed markdown="## Test"></pgs-md-ed>
     </template>
 </dom-module>

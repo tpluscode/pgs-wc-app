@@ -12,6 +12,7 @@
   "homepage": "",
   "private": true,
   "dependencies": {
-    "polymer-ts": "~0.1.26"
+    "polymer-ts": "~0.1.26",
+    "pgs-md-ed": "tpluscode/pgd-md-ed"
   }
 }
