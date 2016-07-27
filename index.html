@@ -20,7 +20,30 @@
     <wc-app></wc-app>
 
     <script>
-        System.import('src/wc-app');
+        System.import('src/wc-app').then(function() {
+            document.querySelector('wc-app').slides = [
+                {
+                    title: 'Title slide',
+                    url: 'slides/intro.md'
+                },
+                {
+                    title: 'Project setup',
+                    url: 'slides/setup.md'
+                },
+                {
+                    title: 'Polymer+TypeScript',
+                    url: 'slides/polymer-ts.md'
+                },
+                {
+                    title: 'Testing',
+                    url: 'slides/testing.md'
+                },
+                {
+                    title: '3rd party components',
+                    url: 'slides/external.md'
+                }
+            ]
+        });
     </script>
 </body>
 </html>

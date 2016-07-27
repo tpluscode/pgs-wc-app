@@ -1,0 +1,11 @@
+<dom-module id="pgs-slide-list">
+    <template>
+        <paper-listbox id="list" on-selected-item-changed="slideSelected">
+            <template is="dom-repeat" id="slides" items="[[slides]]" as="slide">
+                <paper-item>[[slide.title]]</paper-item>
+            </template>
+        </paper-listbox>
+
+        <iron-ajax auto url="[[currentSlideUrl]]" handle-as="text" on-last-response-changed="slideLoaded"></iron-ajax>
+    </template>
+</dom-module>

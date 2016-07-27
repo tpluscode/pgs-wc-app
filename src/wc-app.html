@@ -4,16 +4,40 @@
         <style>
 
             pgs-md-ed {
+                height: 100%;
+
+                --pgs-md-ed-flex: {
+                    justify-content: center;
+                    align-items: center;
+                };
+
                 --pgs-md-ed-container: {
                     padding: 5px;
                     width: 50%;
-                    flex: 1;
                     margin: 5px;
                 }
             }
 
         </style>
 
-        <pgs-md-ed markdown="## Test"></pgs-md-ed>
+        <paper-drawer-panel>
+            <div drawer>
+                <paper-toolbar>
+                    <div class="title">Slides</div>
+                </paper-toolbar>
+
+                <pgs-slide-list slides="[[slides]]" current-slide-content="{{currentSlide}}" ></pgs-slide-list>
+
+                <paper-toggle-button checked="{{showEditor}}">Show editor</paper-toggle-button>
+            </div>
+
+            <div main>
+                <paper-toolbar>
+                    <div class="title">PGS Web Components demo</div>
+                </paper-toolbar>
+
+                <pgs-md-ed markdown="[[currentSlide]]" editor-shown="[[showEditor]]"></pgs-md-ed>
+            </div>
+        </paper-drawer-panel>
     </template>
 </dom-module>
