@@ -12,12 +12,19 @@
     <link rel="import" href="bower_components/polymer-ts/polymer-ts.min.html" />
     <script src="jspm_packages/system.js"></script>
     <script src="config.js"></script>
+
+    <link rel="import" href="bower_components/platinum-sw/platinum-sw-register.html"/>
+    <link rel="import" href="bower_components/platinum-sw/platinum-sw-cache.html"/>
 </head>
 <body>
 
     <!-- WC-way: everything is an element -->
     <!-- and by the way - WebStorm recognizes the <dom-module> tag -->
     <wc-app></wc-app>
+
+    <platinum-sw-register auto-register>
+        <platinum-sw-cache></platinum-sw-cache>
+    </platinum-sw-register>
 
     <script>
         System.import('src/wc-app').then(function() {
