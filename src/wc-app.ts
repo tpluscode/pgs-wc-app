@@ -11,7 +11,7 @@ class WcApp extends polymer.Base {
     @property()
     slides: Array;
 
-    @property({ value: true})
+    @property()
     showEditor: Boolean;
 
     ready() {
